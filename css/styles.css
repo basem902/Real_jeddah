@@ -1355,6 +1355,129 @@ a {
 }
 
 /* ==========================================================================
+   EARLY ACCESS BLOCK
+   ========================================================================== */
+.early-access-block {
+  max-width: 720px;
+  margin: 48px auto 0;
+  text-align: center;
+  padding: 48px 40px;
+  background: var(--surface);
+  border: 2px solid var(--brand);
+  border-radius: var(--radius-2xl);
+  position: relative;
+  overflow: hidden;
+}
+
+.early-access-block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--brand), #25d366, var(--brand));
+}
+
+.early-access-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(37, 211, 102, 0.1);
+  color: #25d366;
+  margin-bottom: 20px;
+}
+
+.dark .early-access-icon {
+  background: rgba(37, 211, 102, 0.15);
+}
+
+.early-access-block h3 {
+  font-family: var(--ff-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--ink);
+}
+
+.early-access-block > p {
+  color: var(--ink-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+
+.early-access-features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 24px;
+  max-width: 420px;
+  margin: 0 auto 32px;
+  text-align: right;
+}
+
+.ea-feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: var(--ink-light);
+}
+
+.ea-check {
+  color: #25d366;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.early-access-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.early-access-cta .btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #25d366;
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.early-access-cta .btn-whatsapp:hover {
+  background: #1da851;
+  transform: translateY(-2px);
+}
+
+.ea-spots {
+  font-size: 0.85rem;
+  color: var(--brand);
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .early-access-block {
+    padding: 32px 20px;
+  }
+  .early-access-features {
+    grid-template-columns: 1fr;
+  }
+  .early-access-block h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ==========================================================================
    PRICING
    ========================================================================== */
 .pricing-toggle {
