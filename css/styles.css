@@ -1588,12 +1588,13 @@ a {
 .pricing-price .price-original {
   display: block;
   font-family: 'Changa', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
-  color: var(--ink-muted);
+  color: #e74c3c;
   text-decoration: line-through;
-  opacity: 0.6;
-  margin-bottom: 2px;
+  opacity: 0.75;
+  margin-bottom: 4px;
+  letter-spacing: 1px;
 }
 
 .pricing-price .amount {
