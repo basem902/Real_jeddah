@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Wasl.ai Landing Page Styles
+   Wasl.ai (smartsapp.net) Landing Page Styles
    Dark Premium RTL Arabic — WhatsApp AI Real Estate Agent
    ========================================================================== */
 
@@ -456,18 +456,6 @@ section {
   position: relative;
 }
 
-.hero-badge {
-  display: inline-block;
-  background: rgba(16, 185, 129, 0.1);
-  color: var(--brand);
-  border: 1px solid rgba(16, 185, 129, 0.2);
-  border-radius: var(--radius-full);
-  padding: 6px 16px;
-  font-size: 14px;
-  font-weight: 500;
-  margin-bottom: 20px;
-}
-
 .hero-title {
   margin-bottom: 20px;
 }
@@ -742,12 +730,6 @@ section {
   position: relative;
 }
 
-.pain-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 24px;
-}
-
 .pain-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -945,12 +927,6 @@ section {
   position: relative;
 }
 
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
-}
-
 .feature-card {
   background: var(--bg-card);
   border: 1px solid var(--border);
@@ -1133,10 +1109,27 @@ section {
   background: var(--bg-card);
   border-radius: 12px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   color: var(--text-muted);
   font-size: 16px;
+  gap: 16px;
+  padding: 32px;
+  text-align: center;
+}
+
+.placeholder-content h3 {
+  font-size: 20px;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.placeholder-content p {
+  color: var(--text-secondary);
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 480px;
 }
 
 .dashboard-panel {
@@ -1799,8 +1792,7 @@ section {
 
 /* ---- Large tablets / small desktops ---- */
 @media (max-width: 1024px) {
-  .grid-3,
-  .features-grid {
+  .grid-3 {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1860,8 +1852,7 @@ section {
     font-size: clamp(24px, 5vw, 34px);
   }
 
-  .grid-2,
-  .pain-grid {
+  .grid-2 {
     grid-template-columns: 1fr;
   }
 
@@ -1918,11 +1909,6 @@ section {
     font-size: 16px;
   }
 
-  /* Features */
-  .features-grid {
-    grid-template-columns: 1fr;
-  }
-
   /* Community */
   .community-card {
     padding: 24px;
@@ -1976,6 +1962,11 @@ section {
   /* Carousel buttons hide on mobile */
   .carousel-btn {
     display: none;
+  }
+
+  /* Avoid overlap between WhatsApp float and back-to-top on mobile */
+  .whatsapp-float {
+    bottom: 80px;
   }
 }
 
@@ -2038,8 +2029,7 @@ section {
     margin-inline: auto;
   }
 
-  .section-badge,
-  .hero-badge {
+  .section-badge {
     font-size: 12px;
     padding: 4px 12px;
   }
@@ -2329,20 +2319,66 @@ textarea:focus-visible {
   outline-offset: 2px;
 }
 
+.toggle-btn:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: var(--radius-full);
+}
+
+.carousel-dot:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 4px;
+}
+
+.faq-question:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
 /* Print styles */
 @media print {
   .navbar,
   .whatsapp-float,
-  .back-to-top {
+  .back-to-top,
+  .mobile-menu,
+  .chat-carousel,
+  .carousel-dots,
+  .hero-phone {
     display: none !important;
   }
 
   body {
     background: #fff;
     color: #000;
+    font-size: 12pt;
   }
 
   section {
     padding: 24px 0;
+    break-inside: avoid;
+  }
+
+  .glass-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    backdrop-filter: none;
+  }
+
+  a[href]::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #555;
+  }
+
+  a[href^="#"]::after {
+    content: none;
+  }
+
+  h1, h2, h3 {
+    color: #000;
+  }
+
+  p {
+    color: #333;
   }
 }

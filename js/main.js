@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Wasl.ai Landing Page JavaScript
+   Wasl.ai (smartsapp.net) Landing Page JavaScript
    Arabic RTL Real Estate WhatsApp AI Agent — Dark Theme
    ========================================================================== */
 
@@ -33,8 +33,9 @@
           revealObserver.observe(el);
         });
 
-        // Safety fallback: force all .reveal visible after 4 seconds
+        // Safety fallback: force all .reveal visible after 4 seconds (only if tab visible)
         setTimeout(function () {
+          if (document.hidden) return;
           revealElements.forEach(function (el) {
             if (!el.classList.contains('visible')) {
               el.classList.add('visible');
@@ -291,23 +292,12 @@
        5. Pricing Toggle (Monthly / Yearly)
        ====================================================================== */
     try {
-      var pricingSwitch = document.querySelector('.toggle-switch');
-      var pricingLabels = document.querySelectorAll('.pricing-toggle > span');
       var priceAmounts = document.querySelectorAll('[data-monthly][data-yearly]');
       var periodLabels = document.querySelectorAll('.price-period');
       var discountBadge = document.querySelector('.discount-badge');
       var periodBtns = document.querySelectorAll('[data-period]');
 
       function setPricing(isYearly) {
-        if (pricingSwitch) {
-          pricingSwitch.classList.toggle('active', isYearly);
-        }
-
-        pricingLabels.forEach(function (label, i) {
-          if (label.classList.contains('discount-badge')) return;
-          label.classList.toggle('active', isYearly ? i === 1 : i === 0);
-        });
-
         periodBtns.forEach(function (btn) {
           var p = btn.getAttribute('data-period');
           btn.classList.toggle('active', (isYearly && p === 'yearly') || (!isYearly && p === 'monthly'));
@@ -324,12 +314,6 @@
         if (discountBadge) {
           discountBadge.style.opacity = isYearly ? '1' : '0.5';
         }
-      }
-
-      if (pricingSwitch) {
-        pricingSwitch.addEventListener('click', function () {
-          setPricing(!pricingSwitch.classList.contains('active'));
-        });
       }
 
       periodBtns.forEach(function (btn) {

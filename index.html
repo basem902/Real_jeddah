@@ -15,7 +15,9 @@
   <meta property="og:title" content="وَصْل.ai | وكيلك العقاري الذكي على واتساب">
   <meta property="og:description" content="وكيل مبيعات عقاري بالذكاء الاصطناعي. يرد فوراً ويحجز المعاينات تلقائياً — من رسالة واتساب إلى صفقة مغلقة.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="images/og-cover.svg">
+  <meta property="og:image" content="https://smartsapp.net/images/og-cover.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://smartsapp.net/">
   <meta property="og:locale" content="ar_SA">
 
@@ -23,6 +25,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="وَصْل.ai | وكيلك العقاري الذكي على واتساب">
   <meta name="twitter:description" content="وكيل مبيعات عقاري بالذكاء الاصطناعي. يرد فوراً ويحجز المعاينات تلقائياً.">
+  <meta name="twitter:image" content="https://smartsapp.net/images/og-cover.png">
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -48,8 +51,8 @@
         "description": "منصة مبيعات عقارية ذكية مدعومة بالذكاء الاصطناعي عبر واتساب",
         "offers": {
           "@type": "AggregateOffer",
-          "lowPrice": "99",
-          "highPrice": "999",
+          "lowPrice": "82",
+          "highPrice": "832",
           "priceCurrency": "SAR"
         }
       }
@@ -63,6 +66,9 @@
   <!-- Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Font preload -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" as="style">
 
   <!-- Stylesheet -->
   <link rel="preload" href="css/styles.css" as="style">
@@ -93,8 +99,8 @@
       </nav>
 
       <div class="navbar-actions">
-        <a href="/login" class="nav-login">تسجيل الدخول</a>
-        <a href="/register" class="btn-nav">ابدأ مجاناً</a>
+        <a href="https://smartsapp.net/login" class="nav-login">تسجيل الدخول</a>
+        <a href="https://smartsapp.net/register" class="btn-nav">ابدأ مجاناً</a>
       </div>
 
       <button class="menu-toggle" aria-label="فتح القائمة" aria-expanded="false">
@@ -111,8 +117,8 @@
       <a href="#features">المميزات</a>
       <a href="#how-it-works">كيف يعمل</a>
       <a href="#pricing">التسعير</a>
-      <a href="/login">تسجيل الدخول</a>
-      <a href="/register" class="btn-primary" style="text-align:center;margin-top:16px;">ابدأ مجاناً</a>
+      <a href="https://smartsapp.net/login">تسجيل الدخول</a>
+      <a href="https://smartsapp.net/register" class="btn-primary" style="text-align:center;margin-top:16px;">ابدأ مجاناً</a>
     </nav>
   </header>
 
@@ -135,7 +141,7 @@
             وكيلك الذكي يرد فوراً، يفهم العميل، يعرض العقارات، ويحجز المعاينة — وأنت تركّز على الإغلاق.
           </p>
           <div class="hero-buttons reveal reveal-delay-3">
-            <a href="/register" class="btn-primary">
+            <a href="https://smartsapp.net/register" class="btn-primary">
               ابدأ مجاناً — 14 يوم
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
             </a>
@@ -346,9 +352,9 @@
         </div>
 
         <div class="carousel-dots">
-          <button class="carousel-dot active" data-index="0" aria-label="الشريحة 1"></button>
-          <button class="carousel-dot" data-index="1" aria-label="الشريحة 2"></button>
-          <button class="carousel-dot" data-index="2" aria-label="الشريحة 3"></button>
+          <button class="carousel-dot active" data-index="0" aria-label="محادثة استفسار شقق في الرياض"></button>
+          <button class="carousel-dot" data-index="1" aria-label="محادثة رسالة صوتية لفيلا في جدة"></button>
+          <button class="carousel-dot" data-index="2" aria-label="محادثة متابعة عميل ساخن في الدمام"></button>
         </div>
       </div>
     </section>
@@ -478,25 +484,37 @@
           <div class="dashboard-panel active" data-panel="properties">
             <div class="dashboard-placeholder">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-              <span>إدارة العقارات — عرض وإضافة وتعديل مع مواصفات ديناميكية حسب النوع</span>
+              <div class="placeholder-content">
+                <h3>إدارة العقارات</h3>
+                <p>أضف وعدّل العقارات بسهولة. مواصفات ديناميكية حسب نوع العقار (شقة، فيلا، أرض) مع 165+ حقل بيانات، صور، مواقع، وتسعير مرن.</p>
+              </div>
             </div>
           </div>
           <div class="dashboard-panel" data-panel="conversations">
             <div class="dashboard-placeholder">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-              <span>محادثات واتساب مباشرة — شاهد وتدخّل في أي وقت</span>
+              <div class="placeholder-content">
+                <h3>محادثات واتساب المباشرة</h3>
+                <p>تابع جميع المحادثات في مكان واحد. شاهد ردود الوكيل الذكي، تدخّل يدوياً عند الحاجة، واستعرض سجل كل عميل بالكامل.</p>
+              </div>
             </div>
           </div>
           <div class="dashboard-panel" data-panel="leads">
             <div class="dashboard-placeholder">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
-              <span>العملاء المحتملين — تصنيف (ساخن/دافئ/بارد) وتوزيع تلقائي على المسوقين</span>
+              <div class="placeholder-content">
+                <h3>العملاء المحتملين</h3>
+                <p>تصنيف تلقائي: ساخن، دافئ، أو بارد. توزيع ذكي على المسوقين حسب الدور وحمل العمل. تتبع كامل لرحلة العميل من أول رسالة.</p>
+              </div>
             </div>
           </div>
           <div class="dashboard-panel" data-panel="analytics">
             <div class="dashboard-placeholder">
               <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
-              <span>تحليلات الأداء — أوقات الرد، معدلات التحويل، أداء المسوقين</span>
+              <div class="placeholder-content">
+                <h3>تحليلات الأداء</h3>
+                <p>أوقات الرد، معدلات التحويل، أداء كل مسوق، وتقارير شهرية. اعرف بالضبط أين تكسب وأين تخسر فرص البيع.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -619,7 +637,7 @@
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> بوت واتساب ذكي</li>
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> لوحة تحكم أساسية</li>
             </ul>
-            <a href="/register" class="btn-plan">ابدأ بالأساسي</a>
+            <a href="https://smartsapp.net/register" class="btn-plan">ابدأ بالأساسي</a>
             <p class="plan-trial">14 يوم تجربة مجانية</p>
           </div>
 
@@ -642,7 +660,7 @@
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Lead Scoring</li>
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> تحويل صوتي عربي</li>
             </ul>
-            <a href="/register" class="btn-plan btn-plan-popular">احصل على الاحترافي</a>
+            <a href="https://smartsapp.net/register" class="btn-plan btn-plan-popular">احصل على الاحترافي</a>
             <p class="plan-trial">14 يوم تجربة مجانية</p>
           </div>
 
@@ -663,7 +681,7 @@
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> دعم ذو أولوية</li>
               <li><svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> API + Webhooks</li>
             </ul>
-            <a href="/register" class="btn-plan">احصل على المؤسسات</a>
+            <a href="https://smartsapp.net/register" class="btn-plan">احصل على المؤسسات</a>
             <p class="plan-trial">14 يوم تجربة مجانية</p>
           </div>
         </div>
@@ -746,7 +764,7 @@
       <div class="container text-center">
         <h2 class="reveal">جاهز تخلي واتساب <span class="gold-text">يبيع لك</span>؟</h2>
         <p class="text-secondary reveal reveal-delay-1" style="max-width:500px;margin:16px auto 32px;">ابدأ تجربتك المجانية الآن وشاهد وكيلك الذكي يحوّل رسائل واتساب إلى صفقات حقيقية.</p>
-        <a href="/register" class="btn-primary btn-lg reveal reveal-delay-2">
+        <a href="https://smartsapp.net/register" class="btn-primary btn-lg reveal reveal-delay-2">
           ابدأ مجاناً — 14 يوم
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14"/><path d="M12 5l7 7-7 7"/></svg>
         </a>
@@ -784,15 +802,15 @@
           <ul class="footer-links">
             <li><a href="#showcase">أمثلة حية</a></li>
             <li><a href="#community">المجتمع</a></li>
-            <li><a href="/login">تسجيل الدخول</a></li>
-            <li><a href="/register">إنشاء حساب</a></li>
+            <li><a href="https://smartsapp.net/login">تسجيل الدخول</a></li>
+            <li><a href="https://smartsapp.net/register">إنشاء حساب</a></li>
           </ul>
         </div>
         <div>
           <h4 class="footer-heading">القانوني</h4>
           <ul class="footer-links">
-            <li><a href="/privacy">سياسة الخصوصية</a></li>
-            <li><a href="/terms">شروط الخدمة</a></li>
+            <li><a href="https://smartsapp.net/privacy">سياسة الخصوصية</a></li>
+            <li><a href="https://smartsapp.net/terms">شروط الخدمة</a></li>
           </ul>
         </div>
       </div>
