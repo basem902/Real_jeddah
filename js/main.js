@@ -537,6 +537,7 @@
           document.body.classList.toggle('nav-open', opening);
           menuToggle.setAttribute('aria-expanded', opening ? 'true' : 'false');
           if (mobileMenu) mobileMenu.classList.toggle('open', opening);
+          menuToggle.setAttribute('aria-expanded', String(document.body.classList.contains('nav-open')));
         });
 
         // Close on nav link click
